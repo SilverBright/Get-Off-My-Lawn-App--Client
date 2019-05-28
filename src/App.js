@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Posts from './components/Posts';
 
 let posts = [
-  { title: 'A Post Title', id:1, content: 'post contents', comments: 'post comments' }
+  { title: 'A Post Title', id:1, content: 'post contents', comments: 'post comments' },
+  { title: 'A Second Post Title', id:2, content: 'moar post contents', comments: 'moar post comments' }
 ]
 
 class App extends Component {
