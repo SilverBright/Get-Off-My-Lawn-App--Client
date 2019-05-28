@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './App.css';
 
 class App extends Component {
   render() {
@@ -9,12 +10,12 @@ class App extends Component {
           {/* <Navbar /> */}
         </div>
          <div className="ideas-app container">
-          <h1 className="center blue-text">Get Off My Lawn</h1>
+          <h1 className="center green-text">Get Off My Lawn</h1>
           <div>
-            Post
+            Add a Post
           </div>
           <div className="ideas collection">
-            add a post
+            Post
         </div>
           {/* <Idea /> */}
         </div>
