@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import './App.css';
+import Posts from './components/Posts';
+import Lawn from './lawn.jpg';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+        
         <div className="navbar">
           <h4>Navbar</h4> 
           {/* <Navbar /> */}
@@ -15,7 +17,7 @@ class App extends Component {
             Add a Post
           </div>
           <div className="ideas collection">
-            Post
+            <Posts />
         </div>
           {/* <Idea /> */}
         </div>
