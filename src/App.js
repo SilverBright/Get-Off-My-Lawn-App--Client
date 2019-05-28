@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import Posts from './components/Posts';
-import Lawn from './lawn.jpg';
+
+let posts = [
+  { title: 'A Post Title', id:1, content: 'post contents', comments: 'post comments' }
+]
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        
         <div className="navbar">
           <h4>Navbar</h4> 
           {/* <Navbar /> */}
@@ -17,7 +19,7 @@ class App extends Component {
             Add a Post
           </div>
           <div className="ideas collection">
-            <Posts />
+            <Posts posts={posts}/>
         </div>
           {/* <Idea /> */}
         </div>
