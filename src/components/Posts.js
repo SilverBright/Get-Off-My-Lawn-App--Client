@@ -1,28 +1,27 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 // import PostsAPI from './api/PostsAPI';
-// import React from 'react';
+import React from 'react';
 
 const Posts = ({ posts }) => {
   const renderPosts = posts.map(post =>
-  <div>
-    <div key={post.id}> 
-      <div>
-        {post.title}
-      <div>
-        {post.content}
+    <div className="brainstorm card" key={post.id}>
+      <div className="card-content">
+        <span className="card-title purple-text">{ post.title }</span>
+        {/* </Link> */}
+        <p>{ post.content }</p>
+        <br/>
+        {/* <button onClick={() => this.props.deleteIdea(idea.id)}>Delete Idea</button> */}
       </div>
-        {post.comments}
-      </div>  
     </div>
-  </div>
   )
 
-  return (
-    <div>
-      {renderPosts}
-    </div>
-  )
-};
+    return (
+      <div>
+        { renderPosts }
+      </div>
+    )
+  }
+
 
 // class Posts extends Component {
 //   render() {
