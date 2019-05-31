@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Posts from './components/Posts';
+import { getPosts } from './components/Posts';
+import axios from 'axios'
 
 // let posts = [
 //   { title: "Someone knocked on my door", id:1, content: "There were two of them!!!  Dressed nicely and holding clipboards. I called the police because they looked supicious.  You never know!!!"},
@@ -21,7 +22,7 @@ class App extends Component {
             Add a Post
           </div>
           {/* <div className="posts collection"> */}
-            <Posts posts={posts}/>
+            <Posts posts={getPosts}/>
         {/* </div> */}
           {/* <Idea /> */}
         </div>
