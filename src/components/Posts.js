@@ -1,16 +1,34 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PostService from '../services/PostService';
+import { fetchPosts } from '../actions/posts';
+import { connect } from 'react-redux';
 
-const Posts = ({ posts }) => {
-  const renderPosts = posts.map(post =>
-    <span key={post.id}>{post.title}</span>
-    )
+class Posts extends Component {
+  componentDidMount() {
+    this.props.fetchPosts()
+  }
+
+render() {
+  const renderPosts = this.props.posts.map(post =>
+    <div className="getoffmylawn card" key={ post.id }>
+      <div className="card-content">
+        <span className="card-title purple-text">{ post.title }</span>
+        <p>{ post.content }</p>
+      </div>
+    </div>
+  )
 
     return (
       <div>
         { renderPosts }
       </div>
     )
+  }
 }
 
-export default PostService;
+  
+export default connect(
+  state => ({
+    posts: state.posts}), 
+    { fetchPosts }
+    )(Posts);
