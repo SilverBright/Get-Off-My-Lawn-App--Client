@@ -1,5 +1,5 @@
 import React from 'react';
-// import PostService from '../services/PostService';
+import PostService from '../services/PostService';
 
 const Posts = ({ posts }) => {
   const renderPosts = posts.map(post =>
