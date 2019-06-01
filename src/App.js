@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Posts from './components/Posts';
-// import PostService from './services/PostService';
 import './App.css';
-// import Dog from './dog.jpg';
 
 class App extends Component {
   render() {

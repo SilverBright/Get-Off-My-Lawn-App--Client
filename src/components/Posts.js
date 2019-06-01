@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-// import PostService from '../services/PostService';
 import { fetchPosts } from '../actions/posts';
 import { connect } from 'react-redux';
 
 class Posts extends Component {
   componentDidMount() {
+    //         ./actions/posts
     this.props.fetchPosts()
   }
 
@@ -25,7 +25,6 @@ render() {
     )
   }
 }
-
   
 export default connect(
   state => ({

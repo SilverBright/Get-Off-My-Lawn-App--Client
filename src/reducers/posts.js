@@ -1,5 +1,6 @@
-// create state and action type for posts
+// reducers for posts
 
+// set state, check action
 export default (state = [], action) => {
   switch (action.type) {
     case "SUCCESSFUL_POSTS_FETCH":

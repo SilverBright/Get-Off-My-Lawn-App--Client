@@ -1,5 +1,8 @@
-import PostService from '../services/PostService';
-import { makeFetchRequest, finishFetchRequest, unsuccessfulFetchRequest } from './appTransactions';
+import PostAPI from '../services/PostAPI';
+import { makeFetchRequest, finishFetchRequest, unsuccessfulFetchRequest } from './actionTypes';
+
+// import action creators from ./actionTypes
+// then define functions to return those actions
 
 // Synchronous Action Creators
 const successfullPostsFetch = posts => {
@@ -12,18 +15,19 @@ const successfullPostsFetch = posts => {
 // Async Action Creators
 export const fetchPosts = () => {
   return dispatch => {
-          //(actions/appTransactions)
+          // make a fetch request for all posts
+          //(actions/actionTypes)
     dispatch(makeFetchRequest())
     // API
-    PostService.fetchPosts()
-      // iterate through each post
+    PostAPI.fetchPosts()
+      // dispatch actions to complete the request
       .then(posts => {
-                //(actions/appTransactions)
+                //(actions/actionTypes)
         dispatch(finishFetchRequest())
         dispatch(successfullPostsFetch(posts))
       })
       .catch(error => {
-                //(actions/appTransactions)
+                //(actions/actionTypes)
         dispatch(unsuccessfulFetchRequest())
       })
   }
