@@ -4,7 +4,7 @@ import { makeFetchRequest, finishFetchRequest, unsuccessfulFetchRequest } from '
 // Synchronous Action Creators
 const successfullPostsFetch = posts => {
   return {
-    type: 'SUCCESSFUL_IDEAS_FETCH',
+    type: 'SUCCESSFUL_POSTS_FETCH',
     posts: posts
   }
 }
@@ -12,18 +12,18 @@ const successfullPostsFetch = posts => {
 // Async Action Creators
 export const fetchPosts = () => {
   return dispatch => {
-          //(appTransactions)
+          //(actions/appTransactions)
     dispatch(makeFetchRequest())
     // API
     PostService.fetchPosts()
       // iterate through each post
       .then(posts => {
-                //(appTransactions)
+                //(actions/appTransactions)
         dispatch(finishFetchRequest())
         dispatch(successfullPostsFetch(posts))
       })
       .catch(error => {
-                //(appTransactions)
+                //(actions/appTransactions)
         dispatch(unsuccessfulFetchRequest())
       })
   }

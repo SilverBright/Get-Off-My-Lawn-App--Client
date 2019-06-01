@@ -7,6 +7,7 @@ const reducers = combineReducers({
   posts
 })
 
+// Compose is used when you want to pass multiple store enhancers to the store
 
 const store = createStore(
   reducers,

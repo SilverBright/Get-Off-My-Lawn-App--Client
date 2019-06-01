@@ -1,3 +1,5 @@
+// action creators for fetching, completing a fetch, and getting an unsuccessull fetch
+
 export const makeFetchRequest = () => {
   return {
     type: 'MAKING_API_REQUEST',

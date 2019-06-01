@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PostService from '../services/PostService';
+// import PostService from '../services/PostService';
 import { fetchPosts } from '../actions/posts';
 import { connect } from 'react-redux';
 

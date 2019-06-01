@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 import Posts from './components/Posts';
-import PostService from './services/PostService';
+// import PostService from './services/PostService';
 import './App.css';
+// import Dog from './dog.jpg';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <div className="navbar">
+        
           <h4>Navbar</h4> 
           {/* <Navbar /> */}
         </div>
+        {/* <img src={ Dog } alt="dog"/> */}
           <div className="posts-app container">
             <h1 className="center -text">Get Off My Lawn</h1>
               <div className="posts collection">
@@ -21,6 +24,7 @@ class App extends Component {
     );
   }
 }
+
 
 export default App;
 
